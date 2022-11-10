@@ -1,0 +1,17 @@
+# spring boot starter
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=com.clarity.apiclientsdk.ApiClientConfig
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
