@@ -1,4 +1,4 @@
-package com.clarity.apiclientsdk.Model;
+package com.clarity.apiclientsdk.model;
 
 import lombok.Data;
 
