@@ -67,15 +67,19 @@ public class ClarityClient {
         return hashMap;
     }
 
-    public String getUsernameByPost(User user) {
+    public Map<String, String> getUsernameByPost(User user) {
         String json = JSONUtil.toJsonStr(user);
         HttpResponse httpResponse = HttpRequest.post(GATEWAY_HOST + "/api/name/user")
                 .addHeaders(getHeaderMap(json))
                 .body(json)
                 .execute();
-        System.out.println(httpResponse.getStatus());
+        int status = httpResponse.getStatus();
         String result = httpResponse.body();
+        System.out.println(status);
         System.out.println(result);
-        return result;
+        Map<String, String> hashMap = new HashMap<>();
+        hashMap.put("status", String.valueOf(status));
+        hashMap.put("result", result);
+        return hashMap;
     }
 }
